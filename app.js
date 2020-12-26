@@ -31,7 +31,7 @@ app.use('/quotes', quotesRouter);
 /* 404 handler to catch undefined or non-existent route requests */ 
 app.use((req, res, next) => {
   console.log('404 error handler called');
-
+  res.status(404).render('not-found');
   /* TODO 1: Send a response to the client
     - Set the response status to 404
     - Render the 'not-found' view
